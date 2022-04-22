@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Mentalo von King of Queens">
+    	<meta name="keywords" content="Mentalo, KingofQueens">
+   	<meta name="author" content="Andre Frank Nikisch">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="res/mt.ico" />
+<body bgcolor=#0f402c text=#FFCC99>
+	<center>
+	<h1>Befrage Mentalo</h1>
+	<h2>Und hole dir die übersinnliche Antwort</h2>
+	<img id="pic" src="res/m1.bmp" alt="Mentalo"><br>
+	<button id="button" onclick="antwort();">So Antworte!</button>
+	<script>
+      		function antwort() {
+			document.getElementById("button").disabled = true;
+			document.getElementById("pic").setAttribute("src", "res/m2.bmp");
+			var select = parseInt((3-1+1)*Math.random()+1);
+			var answer = select.toString();
+			var file = "res/" + "anfg" + answer +".mp3";
+			var audio = new Audio(file);
+			audio.addEventListener("ended", function(){
+				var select = parseInt((3-1+1)*Math.random()+1);
+				var answer = select.toString();
+				var file = "res/" + "ende" + answer +".mp3";
+				var audio = new Audio(file);
+				audio.addEventListener("ended", function(){
+					document.getElementById("button").disabled = false;	
+					document.getElementById("pic").setAttribute("src", "res/m1.bmp");
+				});
+				audio.play();			
+			});
+   			audio.play();
+      		}
+    	</script>
+</body>
+</html>
