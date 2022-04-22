@@ -10,7 +10,7 @@ Der zweite Teil ist die eigentliche Antwort und wird zufällig aus folgenden dre
 a) "Ja"
 b) "Nein"
 c) "Mach weiter"
-In der HTML/JavaScript Datei wird nach dem Klicken auf den Button dieser deaktiviert, Mentalos Bild 
+In der HTML Datei wird nach dem Klicken auf den Button dieser deaktiviert, Mentalos Bild 
 durch eines mit roten Augen geöffnet und die Soundausgabe des ersten Teils begonnen. Dabei wird eine ganzzahlige 
 Zufallszahl zwischen 1 und 3 bestimmt und als String konvertiert. Damit wird der Pfad zur MP3 Datei 
 gebildet und die entsprechende Datei abgespielt. Das bei erfolgtem Abspielen ausgelöste Event 
